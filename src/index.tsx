@@ -24,7 +24,7 @@ const app = new Elysia()
     .use(swagger())
     .use(html())
     .get('/', () => index(<h1>child rendered</h1>))
-    .listen(9001)
+    .listen(8080)
 
 console.log(`💨 Elysia is running at http://${app.server?.hostname}:${app.server?.port}`);
 console.log(`💨 Swagger is available at http://${app.server?.hostname}:${app.server?.port}/swagger`);
