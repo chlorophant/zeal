@@ -13,7 +13,6 @@ const index = (children: JSX.Element) => (
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
         </head>
         <body>
-            cool, the children rendered:
             {children}
         </body>
     </html>
@@ -24,7 +23,7 @@ const app = new Elysia()
     .use(swagger())
     .use(html())
     .get('/', () => index(<h1>child rendered</h1>))
-    .listen(process.env.PORT || 8080)
+    .listen(process.env.PORT || 3000)
 
-console.log(`💨 Elysia is running at http://${app.server?.hostname}:${app.server?.port}`);
-console.log(`💨 Swagger is available at http://${app.server?.hostname}:${app.server?.port}/swagger`);
+console.log(`💨  Elysia is running at http://${app.server?.hostname}:${app.server?.port}  💨`);
+console.log(`💨  Swagger is available at http://${app.server?.hostname}:${app.server?.port}/swagger  💨`);
