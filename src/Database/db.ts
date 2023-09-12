@@ -1,6 +1,6 @@
 // import { createClient } from '@libsql/client'
 // import { drizzle as tursoDrizzle } from 'drizzle-orm/libsql'
-import { drizzle as sqliteDrizzle } from 'drizzle-orm/bun-sqlite';
+import { drizzle as sqliteDrizzle  } from 'drizzle-orm/bun-sqlite';
 import { Database } from 'bun:sqlite';
 import * as schema from './schema'
 // const isLocal = Bun.env.ENV === 'local'

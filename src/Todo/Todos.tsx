@@ -30,7 +30,8 @@ export const todos = new Elysia()
         })
         .post('/', async ({ body }) => {
             const { todo_content: content } = body
-            const todo = await db.insert(todoTable).values({content, completed: false}).returning()
+            const insertData = {id: crypto.randomUUID(), content, completed: false}
+            const todo = await db.insert(todoTable).values(insertData).returning()
             return <li>{todo[0].content}</li>
         }, todo_input)
     ))

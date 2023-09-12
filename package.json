@@ -5,7 +5,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/App.tsx",
     "start": "bun run src/App.tsx",
-    "migrate_local": "bun drizzle-kit generate:sqlite --schema=./src/Database/schema.ts"
+    "migrate_local": "bun drizzle-kit generate:sqlite --schema=./src/Database/schema.ts && bun migrate_local.ts"
   },
   "dependencies": {
     "@elysiajs/html": "^0.6.4",
